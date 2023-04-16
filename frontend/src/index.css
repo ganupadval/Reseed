@@ -62,13 +62,16 @@ header .navbar-white a {
   color: #3d566e;
   font-weight: 700;
 }
-.item.content,
+
 .item.portfolio,
 .item.team,
 .item.pricing,
 .item.contact {
   padding-top: 40px;
   padding-bottom: 0px;
+}
+.item.content{
+  padding-top: 180px;
 }
 .padding-top-100 {
   padding-top: 180px !important;
@@ -95,7 +98,7 @@ header .navbar-white {
   justify-content: space-between;
   z-index: 998;
   transition: all 0.3s ease;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   text-transform: uppercase;
 }
 .text-homeimage {
@@ -204,7 +207,7 @@ h1.latestitems {
   width: 20px;
   vertical-align: top;
   text-align: center;
-  color: #e4e4e4;
+  color: yellow;
 }
 .paddingtop0 {
   padding-top: 0 !important;
@@ -251,7 +254,8 @@ img {
 }
 .productbox {
   background: #fff;
-  padding: 13px;
+  padding: 7px;
+  height: 40rem;
   border: 1px solid #e4e4e4;
   margin-bottom: 30px;
 }
@@ -261,13 +265,18 @@ img {
 .productbox h1 {
   display: block;
   font-size: 17px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-top: 15px;
-  border-bottom: double medium #eee;
-  padding-bottom: 15px;
-  margin-bottom: 10px;
+  /* border-bottom: double medium #eee; */
+  /* padding-bottom: 15px; */
+  /* margin-bottom: 10px; */
   font-weight: 500;
   color: #333;
+}
+
+.productbox h6{
+  border-bottom: double medium #eee;
+  padding-bottom: 10px;
 }
 .product-details {
   padding: 6px 0 0 0;

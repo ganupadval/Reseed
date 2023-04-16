@@ -10,6 +10,11 @@ function Sellnow() {
                 class="item"
                 data-scrollreveal="enter top over 0.4s after 0.1s"
               >
+               {/* <h1 class="callactiontitle">
+                  {" "}
+                  Sell Your Books On Our Site{" "}
+                  <span class="callactionbutton" ><Link to="/sellnow">Recommend Books</Link></span>
+                </h1> */}
                 <h1 class="callactiontitle">
                   {" "}
                   Sell Your Books On Our Site{" "}

@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'book_admin',
     'sellerform',
-
+    'recommender',
     'base.apps.BaseConfig',
 
     'rest_framework',

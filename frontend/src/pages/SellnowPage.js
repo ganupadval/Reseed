@@ -114,7 +114,7 @@ function SellnowPage() {
   const options2 = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"];
 
   return (
-    <div style={{ display: "flex" }}>
+    <div >
       <div>
         <div>
           <NavBar />
@@ -131,7 +131,7 @@ function SellnowPage() {
               </div>
               <form onSubmit={handleSubmit}>
                 <div className="container">
-                  <div style={{ width: "25%" }}>
+                  <div style={{width: "300px" }}>
                     <label for="exampleInputEmail1">Name</label>
                     <input
                       type="text"
@@ -143,7 +143,7 @@ function SellnowPage() {
                       onChange={(e) => setName(e.target.value)}
                     />
                   </div>
-                  <div style={{ width: "25%" }}>
+                  <div style={{ width: "300px"}}>
                     <label for="exampleInputEmail1">Email</label>
                     <input
                       type="text"
@@ -155,7 +155,7 @@ function SellnowPage() {
                       onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
-                  <div style={{ width: "25%" }}>
+                  <div style={{width: "300px" }}>
                     <label for="exampleInputEmail1"> Book Title</label>
                     <input
                       type="text"
@@ -167,7 +167,7 @@ function SellnowPage() {
                       onChange={(e) => setBookTitle(e.target.value)}
                     />
                   </div>
-                  <div style={{ width: "25%" }}>
+                  <div style={{ width: "300px"}}>
                     {/* <input
                       type="text"
                       value={booktitle}

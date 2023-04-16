@@ -40,6 +40,10 @@ function NavBar() {
               </li>
 
               <li class="propClone">
+                <Link to="/recommend">Recommendation</Link>
+              </li>
+
+              <li class="propClone">
                 <Link to="/sellnow">Sell Now</Link>
               </li>
                 {user ? (<li class="propClone"><a>Hello  {user.username }</a>  </li>) : (<li><Link to="/register">Register</Link></li>)}

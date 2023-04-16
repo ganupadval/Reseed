@@ -6,7 +6,7 @@ import { AuthProvider } from './context/AuthContext'
 import HomePage from './pages/HomePage'
 import Home from './pages/Home'
 import LoginPage from './pages/LoginPage'
-
+import Recommender from './pages/Recommend'
 import Header from './components/Header'
 import Shop from './pages/Shop'
 import Checkout from './pages/Checkout'
@@ -25,6 +25,7 @@ function App() {
           <Route component={SellnowPage} path="/sellnow"/>
           <Route component={Shop} path="/shop"/>
           <Route component={Checkout} path="/checkout"/>
+          <Route component={Recommender} path="/recommend"/>
           {/* <Route path="/shop" element={<Shop />}></Route> */}
           {/* <Route path="/checkout" element={<Checkout/>}></Route> */}
         </AuthProvider>

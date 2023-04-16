@@ -8,6 +8,7 @@ import book_admin
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('base.api.urls')),
-    path('', include('book_admin.urls'))
+    path('', include('book_admin.urls')),
+    path('', include('recommender.urls'))
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

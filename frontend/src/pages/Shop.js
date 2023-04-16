@@ -8,9 +8,10 @@ import axios from "axios";
 import Sellnow from "../components/Sellnow";
 // import NavBar from "./navBar";
 import Header from "../components/Header2";
+import StarRating from "../components/Star";
 
 export default function Shop() {
-  const baseURL = "http://127.0.0.1:8000/books/";
+  const baseURL = "http://127.0.0.1:8000/test/";
 
   const [data, setData] = React.useState([]);
 
@@ -33,63 +34,66 @@ export default function Shop() {
 
       <section class="item content">
         <div class="container toparea">
-          <div class="underlined-title">
-            <div class="editContent">
-              <h1 class="text-center latestitems">OUR PRODUCTS</h1>
-            </div>
-            <div class="wow-hr type_short">
-              <span class="wow-hr-h">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </span>
-            </div>
+          {/* <div style={{"textAlign":"center"}}>
+            <a href="#" class="learn-more detailslearn">
+              Recommend Book
+              </a>
+              <button type="submit"><Link to="/checkout">Recommend Book</Link></button>
+            </div><br/> */}
+        </div>
+        <div class="underlined-title">
+          <div class="editContent">
+            <h1 class="text-center latestitems">BUY NOW</h1>
           </div>
+          <div class="wow-hr type_short">
+            <span class="wow-hr-h">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </span>
+          </div>
+            <div>
+              <h1 class="text-center latestitems">NEED A RECOMMENDATION ?</h1>
+            </div>
+            <center>
+            <Link to="/recommend"><span>Click Here!!!</span></Link>
+              
+            </center>
+            <br/>
           <div class="row">
             <div>
               {data.map((item) => {
                 return (
                   <>
-                    <div class="col-md-4" key={item.id}>
+                    <div class="col-md-3" key={item.avg_rating}>
                       <div class="productbox">
                         <div class="fadeshop">
-                          <div
-                            class="captionshop text-center"
-                            style={{ display: "none" }}
-                          >
-                            <h3>{item.title}</h3>
-                            <p>
-                              This is a short excerpt to generally describe what
-                              the item is about.
-                            </p>
-                            <p>
-                              <a href="#" class="learn-more detailslearn">
-                                <i class="fa fa-shopping-cart"></i> Purchase
-                              </a>
-                              <a href="#" class="learn-more detailslearn">
-                                <i class="fa fa-link"></i> Details
-                              </a>
-                            </p>
+                         
+                          <div style={{ display: "flex" }} class="maxproduct">
+                            <img
+                              style={{ margin: "auto" }}
+                              src={item.image_url}
+                              alt=""
+                            />
                           </div>
-                          <span class="maxproduct">
-                            <img src={"http://localhost:8000"+item.image} alt="" />
-                          </span>
                         </div>
                         <div class="product-details">
-                          <a href="#">
-                            <h1>{item.title}</h1>
-                          </a>
+                          <h1>{item.title}</h1>
+                          <h6>{item.author}</h6>
                           <span class="price">
-                            <span class="edd_price">{item.price}</span>
+                            <StarRating avg_rating={item.avg_rating} />
+                            <span class="edd_price">₹ {item.num_ratings}</span>
                           </span>
-                          <div><button type="submit"><Link to="/checkout">Purchase</Link></button></div>
+                          <div>
+                            <button type="submit">
+                            <Link to={{
+                              pathname: '/checkout',
+                              state: { bk: {title: item.title, price: item.num_ratings} }
+                            }}>Purchase</Link>
+                            </button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-
-                    <div >
-                      
-                      <p>{item.im}</p>
                     </div>
                   </>
                 );
